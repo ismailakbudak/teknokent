@@ -17,8 +17,8 @@ class CreateAdminTable extends Migration {
                 $table->engine = 'InnoDB';
                 	 
                 $table->increments('id');
-                $table->string('email', 100)->unique()->nullable();
-                $table->string('username', 50 )->nullable();
+                $table->string('email', 100)->nullable();
+                $table->string('username', 50 )->unique()->nullable();
                 $table->string('password', 50 )->nullable();
                 $table->string('name', 50 )->nullable();
                 $table->string('surname', 50 )->nullable();

@@ -45,29 +45,45 @@ class AdminController extends \BaseController {
 	 */
 	public function store()
 	{
+		/*
 		$email    = Input::get('email');
 		$username = Input::get('username');
 		$password = Input::get('password');
 		$name     = Input::get('name');
 		$surname  = Input::get('surname'); 
-
-        $data =  array( 'email'    =>  $email,
-                        'username' =>  $username,
-                        'password' =>  $password,
-                        'name'     =>  $name,
-                        'surname'  =>  $surname   );
-
-        $admin = Admin::create($data); 
-        return Redirect::action('AdminController@show', array('id' => $admin->id ) );
-        //return Redirect::action('UserController@profile', array(1));
-        //return View::make('admins.profile', array('admin' => $admin  ));
-        //return Redirect::action('HomeController@index');
-        //return Redirect::route('profile', array(1));
-        //return Redirect::route('profile', array('user' => 1));
-        //return Redirect::route('login');
-        return Redirect::to('user/login')->with('message', 'Login Failed');
-        return Redirect::to('user/login');
-	}
+        */
+        $input = Input::all();
+       
+       /*
+        $validation = Validator::make( Input::all(), Admin::$rules, Admin::$messages);  
+        if($validation->fails()) {
+            return Redirect::back()->withInput()->withErrors($validation);
+        }
+        return "ismail"; 
+        */
+       
+        // Check data
+        $validation = Validator::make($input, Admin::$rules, Admin::$messages );
+        if ($validation->passes())
+        {
+	        $admin = Admin::create($input); 
+	  	    Session::flash('success', 'Yönetici başarıyla oluşturuldu!');      
+	        return Redirect::action('AdminController@show', array('id' => $admin->id ) );
+	        //return Redirect::action('UserController@profile', array(1));
+	        //return View::make('admins.profile', array('admin' => $admin  ));
+	        //return Redirect::action('HomeController@index');
+	        //return Redirect::route('profile', array(1));
+	        //return Redirect::route('profile', array('user' => 1));
+	        //return Redirect::route('login');
+	        //return Redirect::to('user/login')->with('message', 'Login Failed');
+            //return Redirect::to('user/login');
+	    }
+	    // Redirect::action('AdminController@create')
+        return Redirect::back() 
+                ->withInput()
+                ->withErrors($validation)
+                ->with('message', 'There were validation errors.');
+    }
 
 	/**
 	 * Display the specified resource.
@@ -77,8 +93,7 @@ class AdminController extends \BaseController {
 	 * @return Response
 	 */
 	public function show($id)
-	{
-
+	{ 
          $admin = Admin::find($id);
          
        // return   View::make('admins.profile')->with('admin', $admin);
@@ -94,7 +109,9 @@ class AdminController extends \BaseController {
 	 */
 	public function edit($id)
 	{
-		//
+
+        $admin = Admin::find($id); 
+        return View::make('admins.edit', array('admin' => $admin  ));
 	}
 
 	/**
@@ -106,7 +123,27 @@ class AdminController extends \BaseController {
 	 */
 	public function update($id)
 	{
-		//
+	     
+		$validator = Validator::make(Input::all(), Admin::rules2($id), Admin::$messages);
+		// process the login
+		if ($validator->passes()) {
+			// store
+			$admin = Admin::find($id);
+			$admin->name     = Input::get('name');
+			$admin->surname  = Input::get('surname');
+			$admin->email    = Input::get('email');
+			$admin->username = Input::get('username');
+			$admin->save();
+
+			// redirect
+			Session::flash('success', 'Yönetici başarıyla güncellendi!');
+			return Redirect::to('admin/' . $admin->id );
+		}
+
+	    return Redirect::to('admin/' . $id . '/edit')
+				->withErrors($validator)
+				->withInput(Input::except('password'));
+		  
 	}
 
 	/**
@@ -118,7 +155,13 @@ class AdminController extends \BaseController {
 	 */
 	public function destroy($id)
 	{
-		//
+	    // delete
+		$admin = Admin::find($id);
+		$admin->delete();
+
+		// redirect
+		Session::flash('success', 'Yönetici başarıyla silindi!');
+		return Redirect::to('admins');
 	}
 
 }
