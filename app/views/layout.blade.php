@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
 	     <meta charset="UTF-8"> 
-       <title> Ev Muhasebesi ::  @yield('title') </title> 
+       <title> Pamukkale Üniversitesi Teknokent ::  @yield('title') </title> 
        {{ HTML::style('css/bootstrap.min.css'); }}
        {{ HTML::style('css/bootswatch.min.css'); }}
 	     {{ HTML::script('js/jquery.min.js'); }}
@@ -32,23 +32,29 @@
             </div>
             <div class="navbar-collapse collapse" id="navbar-main">
               <ul class="nav navbar-nav">
-                <li class="dropdown">
-                  <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"> Yöneticiler <span class="caret"></span></a>
-                  <ul class="dropdown-menu" aria-labelledby="themes">
-                    <li><a tabindex="-1" href="{{ URL::action('AdminController@index') }}"> Listele </a></li>
-                    <li class="divider"></li> 
-                    <li><a tabindex="-1" href="{{ URL::action('AdminController@create') }}">Yönetici Ekle </a></li>
-                  </ul>
-                </li>
+                 @if( Auth::admin()->check() )
+                    <li class="dropdown">
+                      <a class="dropdown-toggle" data-toggle="dropdown" href="#" id="themes"> Yöneticiler <span class="caret"></span></a>
+                      <ul class="dropdown-menu" aria-labelledby="themes">
+                        <li><a tabindex="-1" href="{{ URL::action('AdminController@index') }}"> Listele </a></li>
+                        <li class="divider"></li> 
+                        <li><a tabindex="-1" href="{{ URL::action('AdminController@create') }}">Yönetici Ekle </a></li>
+                      </ul>
+                    </li>
+                @endif
                 <li>
                   <a href="{{ URL::action('HomeController@help') }}">Yardım</a>
                 </li>  
               </ul> 
               <ul class="nav navbar-nav navbar-right">
-                <li  title="Giriş işlemi için tıklayınız" data-toggle="tooltip" data-placement="left" >
-                    <a href="#" target="_blank"  > Giriş </a></li>
-                <li title="Üye olmak için tıklayınız" data-toggle="tooltip" data-placement="left" >
-                    <a href="#" target="_blank"> Üye ol </a></li>
+                
+                  @if( !Auth::admin()->check() )
+                    <li  title="Giriş işlemi için tıklayınız" data-toggle="tooltip" data-placement="left" >
+                        <a href="{{ URL::to('login') }}"   > Giriş </a></li> 
+                  @else
+                    <li title="Üye olmak için tıklayınız" data-toggle="tooltip" data-placement="left" >
+                        <a href="{{ URL::to('logout') }}"  > Çıkış </a></li>
+                  @endif      
               </ul>
 
             </div>

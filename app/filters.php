@@ -45,9 +45,18 @@ Route::filter('auth', function()
 		{
 			return Redirect::guest('login');
 		}
-	}
+	} 
+       
 });
 
+// If admin login is required
+Route::filter('auth-admin', function()
+{
+	if ( !Auth::admin()->check() ){
+	    return Redirect::to('login')->with('message',"Lütfen giriş yapınız!");
+	}
+       
+});
 
 Route::filter('auth.basic', function()
 {

@@ -29,7 +29,7 @@ footer p{clear:left;margin-bottom:0}
  .tx-left  { text-align:left   }
  .tx-right { text-align:right  }
  .fs-25{ font-size: 25px; } 
-
+ ul li{list-style: none;}
 .form-control{
    height: 40px;
 }

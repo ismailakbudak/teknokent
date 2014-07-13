@@ -4,13 +4,12 @@
 
 @section('content')
   <div class="row" >
-    
     <a class="btn btn-small btn-primary" href="{{ URL::action('AdminController@create') }}">
        Yeni Admin Oluştur <span class='img-loader hide'></span> 
     </a>
     <br>
-    <br>
-     
+    <br> 
+    {{ $admins->links() }}
     <div class="bs-example table-responsive">
       <table class="table table-striped table-bordered table-hover">
         <thead>
@@ -98,6 +97,7 @@
        </tbody> 
       </table> 
     </div>
+    {{ $admins->links() }}
   </div>
 
  

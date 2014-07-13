@@ -11,6 +11,7 @@
 			<p>email : {{ $admin->email }}</p>
 			<p>isim : {{ $admin->name }}</p>
 			<p>soyisim : {{ $admin->surname }}</p>
+      <p>şifre : {{ $admin->password }}</p>
 		 
 		      <!-- delete the admin (uses the destroy method DESTROY /admin/{id} -->
                     <!-- we will add this later since its a little more complicated than the other two buttons -->

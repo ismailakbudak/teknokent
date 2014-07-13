@@ -23,12 +23,14 @@ class CreateCompanyTable extends Migration {
                 $table->string('owner', 100 )->nullable();
                 $table->string('phone', 15 )->nullable();
                 $table->string('email', 150 )->nullable();
-                $table->string('password', 50 )->nullable();
+                $table->string('password', 65 )->nullable();
                 $table->string('address', 200 )->nullable();
                 $table->string('website', 200 )->nullable();
                 $table->string('logo_path', 200 )->nullable();
                 $table->tinyInteger('status' )->nullable(); 
+                $table->rememberToken();
                 $table->timestamps(); 
+
  
                 $table->index('admin_id');
                 $table->index('department_id');

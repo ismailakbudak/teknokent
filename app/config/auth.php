@@ -2,6 +2,27 @@
 
 return array(
 
+    'multi' => array(
+        'admin' => array(
+            'driver' => 'eloquent',
+            'model' => 'Admin'
+        ),
+        'company' => array(
+            'driver' => 'database',
+            'table' => 'companies'
+        )
+    ),
+
+    'reminder' => array(
+
+        'email' => 'emails.auth.reminder',
+
+        'table' => 'password_reminders',
+
+        'expire' => 60,
+
+    ),
+
 	/*
 	|--------------------------------------------------------------------------
 	| Default Authentication Driver
@@ -15,7 +36,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'eloquent',
+	//'driver' => 'eloquent',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +49,7 @@ return array(
 	|
 	*/
 
-	'model' => 'User',
+	//'model' => 'Admin',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -41,7 +62,7 @@ return array(
 	|
 	*/
 
-	'table' => 'users',
+	//'table' => 'admins',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -57,7 +78,7 @@ return array(
 	| they have less time to be guessed. You may change this as needed.
 	|
 	*/
-
+    /*
 	'reminder' => array(
 
 		'email' => 'emails.auth.reminder',
@@ -67,5 +88,6 @@ return array(
 		'expire' => 60,
 
 	),
+	*/
 
 );

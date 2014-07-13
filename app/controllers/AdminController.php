@@ -4,13 +4,20 @@ class AdminController extends \BaseController {
 
     /**
      * Instantiate a new adminController instance.
+     * Now we need to make sure to protect our POST actions from CSRF attacks 
+     * by setting the CSRF before filter within our
+     *
      */
     public function __construct()
-    {
-        $this->beforeFilter(function()
-        {
-            //
-        });
+    {    
+    	$this->beforeFilter('csrf', array('on'=>'post'));
+        $this->beforeFilter('auth-admin' );
+        /*
+        $this->beforeFilter( function(){ 
+            if ( !Auth::admin()->check() ) return Redirect::to('login')->with('message',"Lütfen giriş yapınız!");
+        } ,array('except'=>'index') );
+        */
+        //$this->beforeFilter('auth', array('only'=>array('getDashboard')));  	 
     }
 
 	/**
@@ -21,9 +28,13 @@ class AdminController extends \BaseController {
 	 */
 	public function index()
 	{
-		$admins = Admin::all();
-
+ 
+		$admins = Admin::paginate(20);
+        
+		//$admins = Admin::all();
+                                                  
         return View::make('admins.index')->with('admins', $admins);
+        
 	}
 
 	/**
@@ -65,8 +76,11 @@ class AdminController extends \BaseController {
         // Check data
         $validation = Validator::make($input, Admin::$rules, Admin::$messages );
         if ($validation->passes())
-        {
-	        $admin = Admin::create($input); 
+        {   
+        	$admin = Admin::create($input); 
+	  	    $admin->password = Hash::make(Input::get('password'));
+            $admin->save();
+
 	  	    Session::flash('success', 'Yönetici başarıyla oluşturuldu!');      
 	        return Redirect::action('AdminController@show', array('id' => $admin->id ) );
 	        //return Redirect::action('UserController@profile', array(1));

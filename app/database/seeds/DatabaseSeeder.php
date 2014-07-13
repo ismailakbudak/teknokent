@@ -26,30 +26,21 @@ class AdminsAppSeeder extends Seeder {
 
 		// seed our admins table -----------------------
 		// we'll create three different admins
-
-		// admin 1 is named Lawly. She is extremely dangerous. 
-		$bearLawly = Admin::create(array(
-			'username' => 'Lawly1',
- 			'name'     => 'Lawly1',
-			'surname'  => 'Lawly1',
-			'email'    => 'isoakbudak@gmail.com',
-		));
-
-		// admin 2 is named Lawly. She is extremely dangerous. 
-		$bearLawly = Admin::create(array(
-			'username' => 'Lawly2',
- 			'name'     => 'Lawly2',
-			'surname'  => 'Lawly2',
-			'email'    => 'isoakbudak2@gmail.com',
-		));
-
-		// admin 3 is named Lawly. She is extremely dangerous. 
-		$bearLawly = Admin::create(array(
-			'username' => 'Lawly3',
- 			'name'     => 'Lawly3',
-			'surname'  => 'Lawly3',
-			'email'    => 'isoakbudak3@gmail.com',
-		));
+        $admin = Admin::orderby('id', 'desc')->first();
+		
+		$i = $admin->id;
+		$this->command->info('The last inserted id' . $i);
+        $count = $i + 100;
+        for ($i; $i <  $count; $i++) { 
+            // admin 3 is named Lawly. She is extremely dangerous. 
+		    $bearLawly = Admin::create(array(
+					'username' => 'Lawly'.$i,
+		 			'name'     => 'Lawly'.$i,
+					'surname'  => 'Lawly'.$i,
+					'email'    => 'isoakbudak'.$i.'@gmail.com',
+		   ));
+        }
+		
 
 
 		$this->command->info('The admins are alive!');

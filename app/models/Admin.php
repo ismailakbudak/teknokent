@@ -35,7 +35,7 @@ class Admin extends Eloquent implements UserInterface, RemindableInterface {
 	  'name'    => 'required',
 	  'surname' => 'required',
 	  'email'   => 'required|email',
-	  'password'=> 'required|min:6|max:50',
+	  'password'=> 'required|alphaNum|min:4|max:50',
 	  'password_confirm' => 'required|same:password',
 	);
 	
@@ -49,6 +49,8 @@ class Admin extends Eloquent implements UserInterface, RemindableInterface {
 		  'surname' => 'required',
 		  'email'   => 'required|email' );
 	}
+
+ 
 
 	/*
 	|--------------------------------------------------------------------------
