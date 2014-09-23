@@ -76,7 +76,7 @@ class Admin extends Eloquent implements UserInterface, RemindableInterface {
            'email.email'	    => 'Belirttiğiniz e-posta adresi geçerli değil, lütfen yazım hatalarını kontrol ediniz.',
          
            'password.required'	=> 'Şifre belirtmelisiniz.',
-           'password.min'	    => 'Şifreniz minimum 6 karakterden oluşmalıdır.',
+           'password.min'	    => 'Şifreniz minimum 4 karakterden oluşmalıdır.',
            'password.max'	    => 'Şifreniz maximum 50 karakter olmalıdır.',
 
            'password_confirm.required' => 'Şifre tekrarı belirtmelisiniz.',

@@ -27,17 +27,32 @@ class AdminsAppSeeder extends Seeder {
 		// seed our admins table -----------------------
 		// we'll create three different admins
         $admin = Admin::orderby('id', 'desc')->first();
+
+	    $root = Admin::create(array(
+					'username' => 'root',
+		 			'name'     => 'root',
+					'surname'  => 'root',
+					'email'    => 'root@gmail.com',
+					'password' => Hash::make('1234'),
+		));
+    
+
+		// is there a any record ?
+		if ( isset($admin) ) 
+	   	    $i = $admin->id;
+		else  
+			 $i = 0;
 		
-		$i = $admin->id;
 		$this->command->info('The last inserted id' . $i);
         $count = $i + 100;
         for ($i; $i <  $count; $i++) { 
             // admin 3 is named Lawly. She is extremely dangerous. 
 		    $bearLawly = Admin::create(array(
-					'username' => 'Lawly'.$i,
-		 			'name'     => 'Lawly'.$i,
-					'surname'  => 'Lawly'.$i,
+					'username' => 'iso'.$i,
+		 			'name'     => 'ismail'.$i,
+					'surname'  => 'AKBUDAK'.$i,
 					'email'    => 'isoakbudak'.$i.'@gmail.com',
+					'password' => Hash::make('1234'),
 		   ));
         }
 		

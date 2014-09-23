@@ -1,0 +1,315 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"str",
+				"string"
+			],
+			[
+				"fi",
+				"first_half"
+			],
+			[
+				"in",
+				"inspect"
+			],
+			[
+				"AR",
+				"Article"
+			],
+			[
+				"un",
+				"unless	unless … end"
+			],
+			[
+				"art",
+				"article"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 68.0,
+		"selected_items":
+		[
+			[
+				"instaa",
+				"Package Control: Install Package"
+			],
+			[
+				"ham",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"haml",
+				"Set Syntax: Ruby Haml"
+			],
+			[
+				"sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"syntax md",
+				"Set Syntax: Markdown"
+			],
+			[
+				"synta",
+				"Set Syntax: Rd (R Documentation)"
+			],
+			[
+				"ruby",
+				"Set Syntax: Ruby"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 398.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/ismail/Sites/php-laravel/app-core/app/models/Company.php",
+		"/home/ismail/Sites/symfony/composer.json",
+		"/home/ismail/Sites/django/mysite/db.sqlite3",
+		"/home/ismail/Desktop/arzuhal/app/controllers/admins_controller.rb",
+		"/home/ismail/Desktop/arzuhal/db/migrate/20140823065622_devise_create_admins.rb",
+		"/home/ismail/Desktop/arzuhal/app/views/layouts/application.html.haml",
+		"/home/ismail/Desktop/arzuhal/config/routes.rb",
+		"/home/ismail/Desktop/arzuhal/app/controllers/users_controller.rb",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/confirmations/new.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/unlocks/new.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/shared/_links.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/unlocks/new.html.erb",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/passwords/edit.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/mailer/unlock_instructions.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/mailer/reset_password_instructions.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/mailer/confirmation_instructions.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/users/_form.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/registrations/edit.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/models/user.rb",
+		"/home/ismail/Desktop/arzuhal/app/controllers/registrations_controller.rb",
+		"/home/ismail/Desktop/arzuhal/Gemfile",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/registrations/new.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/sessions/new.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/passwords/new.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/users/new.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/users/index.html.haml",
+		"/home/ismail/Desktop/arzuhal/app/views/users/sa,",
+		"/home/ismail/Desktop/arzuhal/app/views/devise/mailer/unlock_instructions.html.erb",
+		"/home/ismail/Desktop/arzuhal/app/controllers/static_pages_controller.rb",
+		"/home/ismail/Desktop/sql-query/lib/tasks/data.rake",
+		"/home/ismail/Desktop/sql-query/README.md",
+		"/home/ismail/Desktop/sql-query/db/migrate/20140819132553_create_goals.rb",
+		"/home/ismail/Desktop/sql-query/db/migrate/20140819121101_create_matches.rb",
+		"/home/ismail/Desktop/sql-query/db/migrate/20140819115847_create_players.rb",
+		"/home/ismail/Desktop/sql-query/db/migrate/20140819113321_create_teams.rb",
+		"/home/ismail/Desktop/sql-query/config/database.yml",
+		"/home/ismail/Desktop/sql-query/config/routes.rb",
+		"/home/ismail/Desktop/sql-query/app/models/goal.rb",
+		"/home/ismail/Desktop/sql-query/app/models/player.rb",
+		"/home/ismail/Desktop/sql-query/app/models/match.rb",
+		"/home/ismail/Desktop/sql-query/Gemfile",
+		"/home/ismail/Desktop/sql-query/app/models/team.rb",
+		"/home/ismail/Desktop/sql-query/app/views/layouts/application.html.erb",
+		"/home/ismail/Desktop/blog/CHANGELOG.md",
+		"/home/ismail/Desktop/blog/VERSION.txt",
+		"/home/ismail/Desktop/blog/app/views/comments/_form.html.erb",
+		"/home/ismail/Desktop/blog/app/views/articles/show.html.erb",
+		"/home/ismail/Desktop/blog/app/models/comment.rb",
+		"/home/ismail/Desktop/blog/app/views/comments/_comment.html.erb",
+		"/home/ismail/Desktop/blog/app/controllers/comments_controller.rb",
+		"/home/ismail/Desktop/blog/app/controllers/articles_controller.rb",
+		"/home/ismail/Desktop/blog/app/models/article.rb",
+		"/home/ismail/Desktop/blog/README.md",
+		"/home/ismail/Desktop/blog/config/routes.rb",
+		"/home/ismail/Desktop/blog/app/controllers/welcome_controller.rb",
+		"/home/ismail/Desktop/blog/app/views/layouts/application.html.erb",
+		"/home/ismail/Desktop/blog/app/views/welcome/about.html.erb",
+		"/home/ismail/Desktop/blog/app/views/welcome/help.html.erb",
+		"/home/ismail/Desktop/blog/app/views/articles/_form.html.erb",
+		"/home/ismail/Desktop/blog/app/views/articles/index.html.erb",
+		"/home/ismail/Desktop/blog/app/views/articles/new.html.erb",
+		"/home/ismail/Desktop/blog/app/views/articles/edit.html.erb",
+		"/home/ismail/Desktop/blog/config/environments/development.rb",
+		"/home/ismail/Desktop/blog/app/views/welcome/index.html.erb",
+		"/home/ismail/Desktop/rack-sample/README.md",
+		"/home/ismail/Desktop/rack-sample/config.ru",
+		"/home/ismail/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/ismail/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/ismail/Desktop/rack-sample/Gemfile",
+		"/home/ismail/Desktop/rack-sample/public/ruby.html",
+		"/home/ismail/Desktop/rack-sample/public/assets/js/app.js",
+		"/home/ismail/Desktop/rack-sample/public/assets/css/layout.css",
+		"/home/ismail/Desktop/rack-sample/Gemfile.lock",
+		"/home/ismail/Desktop/rack-sample/public/index.html",
+		"/home/ismail/Sites/first/.gitignore",
+		"/opt/lampp/htdocs/XX/hep/seyahat/index.php",
+		"/opt/lampp/htdocs/XX/hep/file_application/config/database.php",
+		"/opt/lampp/htdocs/XX/hep/seyahat/.htaccess",
+		"/opt/lampp/htdocs/XX/hep/_user_guide_my/README.md",
+		"/home/ismail/Desktop/Mysql",
+		"/home/ismail/Sites/first/app/views/products/_product.html.haml",
+		"/home/ismail/Sites/first/app/controllers/application_controller.rb",
+		"/home/ismail/Sites/first/lib/tasks/sample_data.rake",
+		"/home/ismail/Sites/first/lib/tasks/sample_data..rake",
+		"/home/ismail/Sites/first/config/locales/en.yml",
+		"/home/ismail/Sites/first/Gemfile",
+		"/home/ismail/Sites/first/app/assets/stylesheets/application.css.sass",
+		"/home/ismail/Sites/first/app/assets/stylesheets/hq/application.css.sass",
+		"/home/ismail/Sites/first/app/assets/javascripts/hq/application.js.coffee",
+		"/home/ismail/Sites/first/app/assets/javascripts/application.js.coffee",
+		"/home/ismail/Sites/php-laravel/test2/app/controllers/HomeController.php"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 82.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"]\n",
+			"indent"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 29.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 88.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "php-laravel.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 440.0,
+		"selected_items":
+		[
+			[
+				"",
+				"~/Sites/sympfony.sublime-project"
+			]
+		],
+		"width": 334.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 302.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -17,7 +17,7 @@
         <div class="navbar navbar-default navbar-fixed-top">
           <div class="container">
             <div class="navbar-header">
-               <!--
+                <!--
                {{ link_to_action('HomeController@home','Anasayfa', $parameters = array(), $attributes = array('class' => "navbar-brand")) }} 
                 <a class="navbar-brand" href="{{ URL::action('HomeController@home') }}"> Anasayfa </a>
                 -->  
@@ -47,13 +47,28 @@
                 </li>  
               </ul> 
               <ul class="nav navbar-nav navbar-right">
-                
+               
                   @if( !Auth::admin()->check() )
                     <li  title="Giriş işlemi için tıklayınız" data-toggle="tooltip" data-placement="left" >
                         <a href="{{ URL::to('login') }}"   > Giriş </a></li> 
                   @else
-                    <li title="Üye olmak için tıklayınız" data-toggle="tooltip" data-placement="left" >
-                        <a href="{{ URL::to('logout') }}"  > Çıkış </a></li>
+                    <li id="fat-menu" class="dropdown">
+                       <a href="#" class="dropdown-toggle user-process" data-toggle="dropdown">
+                         {{ Auth::admin()->get()->username }} <b class="caret"></b>
+                       </a>
+                       <ul class="dropdown-menu">
+                         <li> <a href="{{ URL::to('profile') }}"  > 
+                                  <i class='fa fa-briefcase fa-fw'></i> Profil </a></li>
+                         <li> <a href="{{ URL::to('admin/' . Auth::admin()->get()->id ) }}"  > 
+                              <i class='fa fa-cog fa-fw'></i> Bilgilerim </a> </li>
+                         <li> <a href="{{ URL::to('password') }}"  >
+                              <i class='fa fa-lock fa-fw' ></i> Şifre Değiştir </a> </li>
+                         <li class="divider"></li>
+                         <li> <a href="{{ URL::to('logout') }}"  > 
+                              <i class='fa fa-sign-out fa-fw' ></i> Çıkış </a> </li>
+                       </ul>
+                     </li>
+
                   @endif      
               </ul>
 
@@ -98,7 +113,7 @@
                   <li class="pull-right"><a href="#top"> Başa dön </a></li> 
                   <li><a target="blank" href="https://twitter.com/isoakbudak">Twitter</a></li>
                   <li><a target="blank" href="https://github.com/ismailakbudak">GitHub</a></li>
-                  <li><a target="blank" href="https://github.com/isoakbudak">Facebook</a></li>
+                  <li><a target="blank" href="https://facebook.com/isoakbudak">Facebook</a></li>
                 </ul>
                 <p> Geliştirici <a target="blank" href="http://ismailakbudak.com">Ismail AKBUDAK</a> </p>
               </div>
