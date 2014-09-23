@@ -6,7 +6,8 @@
 	"require": {
 		"laravel/framework": "4.2.*",
 		"way/generators": "2.*",
-		"ollieread/multiauth": "dev-master"
+		"ollieread/multiauth": "dev-master",
+		"laravelbook/ardent": "2.*"
 	},
 	"autoload": {
 		"classmap": [
